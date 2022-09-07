@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * main - Main arguments functions
  * @ac: Count of argumnents
@@ -7,13 +6,11 @@
  * @env: Environment
  * Return: exit
  */
-
 int main(int ac, char **av, char **env)
 {
 	int pathValue = 0, status = 0, is_path = 0;
-	char *line = NULL, /**ptr to inpt*/ **commands = NULL;
+	char *line = NULL,  **commands = NULL;
 	(void)ac;
-
 	while (1)
 	{
 		errno = 0;
@@ -24,7 +21,6 @@ int main(int ac, char **av, char **env)
 		{
 			pathValue++;
 			commands = tokenize(line);
-
 			if (!commands)
 				free(line);
 			if (!_strcmp(commands[0], "env"))
@@ -53,4 +49,3 @@ int main(int ac, char **av, char **env)
 	}
 	return (status);
 }
-
