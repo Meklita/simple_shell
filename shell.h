@@ -11,3 +11,5 @@
 #include <errno.h>
 
 char *_getline_command(void);
+int main(int ac, char **av, char **env);
+void _getenv(char **env);
